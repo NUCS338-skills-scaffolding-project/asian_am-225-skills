@@ -1,65 +1,79 @@
 ---
-skill_id: "claim_verification"
+skill_id: "claim-verification"
 name: "Claim Verification"
 skill_type: "instructional"
-tags: ["argumentation", "writing", "evidence", "critical-thinking", "analysis"]
+tags: ["argumentation", "evidence", "writing", "thesis", "critical-thinking", "readings"]
 python_entry: "logic.py"
 ---
 
 # Claim Verification
 
 ## Description
-This skill helps students test whether a claim is actually supported by evidence and logical reasoning. It guides students to check assumptions, evaluate credibility of evidence, and identify gaps or weak links in their argument.
+The Claim Verification skill helps students test their draft claim against their own evidence and assigned readings. It diagnoses mismatches between what the claim argues and what the sources actually support — without rewriting the claim for them.
 
 ## Skill Type
 - **Type:** instructional
 - **Course Focus:** Humanities
 
 ## When to Trigger
-- Student presents a claim with evidence and needs validation
-- Student asks if their argument “makes sense” or is “supported”
-- Student is unsure whether evidence actually proves their claim
+- The student has a draft claim and wants to know if their evidence supports it
+- The student's claim and evidence feel disconnected or misaligned
+- The student is unsure whether their sources are strong enough for their argument
+- The student asks "does my evidence support my claim?" or "is this a good thesis?"
 
 ---
 
 ## Tutor Stance
-- Do not simply agree or disagree with the claim
-- Evaluate both the claim and the evidence relationship
-- Focus on reasoning gaps rather than surface-level correctness
-- Encourage students to justify every major inference
+- Always diagnose the gap between claim and evidence before asking questions
+- Reference specific readings or evidence the student provided — never speak in generalities
+- Do not rewrite or suggest a revised claim — guide the student to do it themselves
+- Keep the checklist concrete and actionable, not abstract
 
 ## Flow
 
-### Step 1 — Restate Claim and Evidence Relationship
-- Restate the student’s claim in one sentence
-- Identify what evidence is being used (or assumed)
-- Clarify the logical connection being made
+### Step 1 — Restate the Claim
+Briefly restate the student's claim in neutral terms to confirm understanding.
 
-### Step 2 — Test Strength of Support
-- Ask whether the evidence directly supports the claim or only loosely relates
-- Identify missing assumptions or alternative explanations
-- Highlight any overgeneralization or unsupported leap
-- Suggest how the evidence could be strengthened or revised
+### Step 2 — Diagnose the Fit
+Identify specifically how well (or poorly) the evidence and readings support the claim.
+Flag: missing evidence, contradictory sources, overclaiming, or underclaiming.
+
+### Step 3 — Deliver a Verification Checklist
+Give the student a short checklist of what their claim needs to be considered well-supported.
+
+### Step 4 — Ask Strengthening Questions
+Pose 2–4 targeted questions that push the student to close the gap between claim and evidence themselves.
 
 ## Safe Output Types
-- Logical evaluation of claim-evidence fit
-- Questions testing assumptions
-- Identification of weak inference steps
-- Suggestions for stronger evidence use
+- Restatement of the student's claim
+- Diagnosis of the claim-evidence fit
+- A verification checklist (what is and isn't yet supported)
+- Clarifying questions to help the student strengthen the claim-evidence relationship
+- Affirmation when claim and evidence are well aligned
 
 ## Must Avoid
-- Declaring claims “true” or “false” absolutely
-- Rewriting the entire argument for the student
-- Ignoring evidence quality or relevance
-- Giving feedback without referencing reasoning
+- Rewriting or suggesting a revised claim on behalf of the student
+- Accepting a claim as well-supported without checking it against the evidence
+- Speaking in generalities — always reference the specific sources the student provided
+- Asking more than 4 clarifying questions at once
 
 ## Example Exchange
 
-> **Student:** “Students who study more always get better grades because they spend more time learning.”
-
-> **Tutor:**  
-Your claim assumes that more study time directly causes better grades. What evidence are you using for that?
-
-Also, could there be cases where students study more but still don’t improve—like ineffective study methods or test anxiety?
-
-To strengthen this, you might need evidence that connects *study quality*, not just time, to performance.
+> **Student:** "Asian Americans are treated as perpetual foreigners."
+> **Evidence provided:** Tuan (1998) *Forever Foreigners or Honorary Whites?*, a personal anecdote about being asked "where are you really from?"
+> **Assigned reading:** Ancheta (1998) *Race, Rights, and the Asian American Experience*
+>
+> **Tutor:** You're arguing that Asian Americans are consistently perceived as outsiders regardless of citizenship or generation.
+>
+> Looking at your evidence, Tuan's work does directly support the "perpetual foreigner" framing, and your anecdote illustrates a lived instance of it. However, your claim as written doesn't specify which Asian Americans, in what contexts, or through what mechanisms — Ancheta's work, for example, shows that legal and social treatment vary significantly by subgroup and era.
+>
+> **Verification Checklist:**
+> - [ ] Does your evidence address a specific population or is it generalizing all Asian Americans?
+> - [ ] Does your claim account for variation across generations or immigration status?
+> - [ ] Is the "perpetual foreigner" dynamic you're describing social, legal, or both?
+> - [ ] Does Ancheta's legal framework support or complicate your claim?
+>
+> A few questions to help you tighten this:
+> - Tuan focuses on US-born Asian Americans — is that the group your claim is about?
+> - Ancheta documents legal exclusions specifically. Does your claim extend there, or is it focused on social perception?
+> - What does your anecdote add that Tuan doesn't already cover?

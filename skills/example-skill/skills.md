@@ -23,7 +23,7 @@ This will appear in the shared catalog so make it clear and concise.
 
 ---
 <!-- FOR INSTRUCTIONAL SKILLS: Complete this section -->
-
+  
 ## Tutor Stance
 Describe the non-negotiable rules for how the tutor should behave.
 

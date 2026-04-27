@@ -1,10 +1,11 @@
-# logic.py — Claim Verification Skill
 from pathlib import Path
 from google import genai
 
+
 def load_system_prompt():
-  path = Path(__file__).resolve().parent / "skills.md"
-  return path.read_text(encoding="utf-8").strip()
+    path = Path(__file__).resolve().parent / "skills.md"
+    content = path.read_text(encoding="utf-8")
+    return content.strip()
 
 def llm_request(contents):
   client = genai.Client()
@@ -15,34 +16,30 @@ def llm_request(contents):
   
   return response.candidates[0].content.parts[0].text
 
+
 def run(input):
   """
-  input: dict with keys:
-      - claim: str — the student's draft claim
-      - evidence: str — evidence the student is using
-      - readings: str — assigned readings relevant to the claim
-      - context: str (optional) — assignment context
+  student_input: dict like:
+  {
+      "claim": "...",
+      "context": "assignment prompt (optional)"
+  }
   """
+
   system_prompt = load_system_prompt()
 
   user_prompt = f"""
-  Student's draft claim:
+  Student claim:
   {input.get("claim")}
-
-  Evidence the student is using:
-  {input.get("evidence", "None provided")}
-
-  Assigned readings:
-  {input.get("readings", "None provided")}
 
   Assignment context (if any):
   {input.get("context", "N/A")}
 
   Task:
   Apply the Specifier skill.
-
   {system_prompt}
   """
 
   response = llm_request(user_prompt)
+
   return response
