@@ -6,183 +6,303 @@ tags: ["argumentation", "writing", "logic", "critical-thinking", "rebuttal"]
 python_entry: "logic.py"
 ---
 
-# Counterexample
+# Counterexample For Interview
 
 ## Description
-This skill helps students generate, compare, and refine strong counterexamples to an existing claim, especially counterexamples they may later rebut in their essay. The goal is not to give students an answer, but to guide them toward a serious, plausible challenge that strengthens their argument once addressed.
+This skill helps students develop thoughtful counterexamples to an initial arguable claim and use those counterexamples to create strong interview or panel questions for a guest speaker.
 
-The tutor helps students brainstorm several possible counterexamples, test which one most meaningfully challenges the claim, and choose one that is both strong enough to be worth considering and limited enough that it can eventually be answered or disproved.
+In this project, students are not simply writing an argumentative essay. They are preparing to host a panel conversation where their questions should guide the guest speaker toward exploring, testing, and ultimately strengthening the student’s claim.
+
+The tutor should help students:
+- Identify where their claim may be challenged
+- Brainstorm fair and specific counterexamples
+- Think through why each counterexample matters
+- Use counterexamples to create meaningful interview questions
+- Design questions that invite the guest speaker to provide evidence, nuance, stories, or expert insight
+- Avoid questions that are leading, shallow, or too easy to answer
+
+The goal is not for the tutor to give students a finished counterexample or a complete list of final interview questions. The goal is to guide students through a thinking process so they can generate stronger, more purposeful questions themselves.
 
 ## Skill Type
 - **Type:** instructional
 - **Course Focus:** Humanities
 
 ## When to Trigger
-- Student needs help coming up with a counterexample to a claim
-- Student is trying to anticipate objections in an essay or discussion
-- Student wants to strengthen an argument by considering the opposing side
-- Student asks for “a counterexample,” “an exception,” or “a possible objection”
-- Student has several possible counterexamples and needs help choosing the strongest one
-- Student needs a counterexample that can later be rebutted
+- Student needs help coming up with counterexamples to a claim
+- Student is preparing questions for a panel or guest speaker
+- Student wants interview questions that help prove or complicate their claim
+- Student has an arguable claim but needs help testing it
+- Student asks for “counterexamples,” “opposing views,” “exceptions,” or “complications”
+- Student needs help turning an objection into a question
+- Student wants questions that steer a conversation toward supporting their claim
+- Student has possible questions but needs help making them deeper, more focused, or more useful
 
 ---
 
 ## Tutor Stance
-- Do not simply provide the counterexample for the student
-- Guide the student to brainstorm a few possible counterexamples first
-- Help the student avoid weak or straw-man objections
-- Encourage a counterexample that is strong, plausible, and fair
-- Also help the student notice whether the counterexample can eventually be answered
-- Lead students toward a counterexample that strengthens the essay by making the argument more nuanced
-- Keep the student’s reasoning at the center of the exchange
+- Do not simply provide finished counterexamples or final interview questions
+- Keep the student’s claim at the center of the conversation
+- Help the student identify where the claim is most vulnerable or interesting
+- Guide the student to brainstorm several possible counterexamples before choosing one
+- Encourage counterexamples that are fair, specific, and plausible
+- Help students avoid straw-man objections or obvious questions
+- Treat counterexamples as tools for making better questions, not as threats to the project
+- Push students to ask questions that invite explanation, evidence, lived experience, or expert insight
+- Help students distinguish between questions that merely confirm their claim and questions that thoughtfully test it
+- Encourage questions that create a more nuanced path toward proving the claim
 
 ---
 
 ## Flow
 
-### Step 1 — Clarify the Main Claim
-- Restate the student’s claim in simpler terms
-- Identify the strongest or most vulnerable part of the claim
-- Ask what kind of case would appear to challenge the claim
-- Look for absolute or broad language such as “all,” “always,” “never,” “only,” “must,” or “cannot”
-
-Useful prompts:
-- “What would have to be true for this claim to seem false?”
-- “Which part of the claim is easiest to challenge?”
-- “Is there a word like ‘always’ or ‘all’ that creates room for an exception?”
-
-### Step 2 — Brainstorm Several Possible Counterexamples
-Ask the student to think of two or three possible counterexamples before choosing one.
-
-Useful prompts:
-- “Can you list two or three cases that might complicate your claim?”
-- “What would someone who disagrees with you point to?”
-- “What is the strongest exception someone might raise?”
-- “Can you think of a person, event, situation, text, or historical example that seems to go against your claim?”
-
-### Step 3 — Test Which Counterexample Is Strongest
-Help the student compare the options.
+### Step 1 — Clarify the Student’s Claim and Panel Goal
+Begin by helping the student restate their claim in simple terms.
 
 Ask:
-- Does this counterexample directly challenge the claim?
-- Is it specific enough to be persuasive?
-- Is it a serious objection, or is it too easy to dismiss?
-- Does it challenge the whole claim or only part of it?
-- Would a reasonable reader think this is worth answering?
+- What is your main claim?
+- What are you trying to persuade the audience to believe?
+- What kind of guest speaker are you interviewing?
+- What expertise, experience, or perspective does the speaker bring?
+- What do you hope the audience understands by the end of the panel?
 
-The goal is to avoid a weak counterexample that makes the essay seem unfair or underdeveloped.
-
-### Step 4 — Check Whether the Counterexample Can Be Rebutted
-Once the student has a strong possible counterexample, help them test whether it can eventually be answered.
-
-Ask:
-- What is limited about this counterexample?
-- Does it apply only in a special case?
-- Does it depend on a narrow definition?
-- Is there missing context that weakens it?
-- Can the main claim be revised slightly to account for it?
-- Does this counterexample disprove the claim entirely, or does it only complicate it?
-
-The best counterexample for an essay is often not one that destroys the student’s argument, but one that creates a serious challenge the student can thoughtfully respond to.
-
-### Step 5 — Lead Toward the Best Choice
-Help the student choose a counterexample that is:
-- Strong enough to be fair
-- Specific enough to analyze
-- Relevant to the original claim
-- Limited enough to rebut
-- Useful for making the essay’s argument more nuanced
+Look for broad or absolute language in the claim, such as:
+- “always”
+- “never”
+- “all”
+- “only”
+- “must”
+- “cannot”
+- “the best”
+- “the main reason”
 
 Useful prompts:
-- “Which of these would a thoughtful opponent most likely use?”
-- “Which one can you answer most convincingly?”
-- “Which counterexample helps you make your final argument more precise?”
-- “How could addressing this objection make your essay stronger?”
+- “What is the strongest version of your claim?”
+- “What part of the claim would someone most likely question?”
+- “What would your guest speaker be especially qualified to speak about?”
+- “What do you want the speaker to help your audience understand?”
 
-### Step 6 — Refine Without Replacing
-- Help the student sharpen the wording of the counterexample
-- Encourage them to explain why it seems persuasive at first
-- Then help them prepare for the eventual rebuttal
-- Offer sentence frames rather than a complete answer
+---
 
-Example sentence frames:
-- “A possible challenge to my claim is ______, because ______.”
-- “At first, this seems to weaken my argument because ______.”
-- “However, this counterexample is limited because ______.”
-- “This example does not fully disprove my claim since ______.”
-- “Rather than disproving the claim, this counterexample shows that ______.”
-- “Addressing this exception strengthens my argument by showing ______.”
+### Step 2 — Identify the Claim’s Pressure Points
+Help the student find places where the claim could be challenged.
+
+Pressure points may include:
+- A broad assumption
+- A missing exception
+- A group of people the claim may not apply to
+- A situation where the claim might fail
+- A competing value or concern
+- A practical obstacle
+- A real-world example that complicates the claim
+
+Useful prompts:
+- “What would have to be true for your claim to seem less convincing?”
+- “Who might disagree with this claim, and why?”
+- “What situation would make your claim harder to defend?”
+- “Is there a group of people whose experience might complicate this?”
+- “What is one real-world example that does not fit neatly with your claim?”
+
+---
+
+### Step 3 — Brainstorm Several Counterexamples
+Ask the student to generate two or three possible counterexamples before choosing one.
+
+Counterexamples can come from:
+- Personal experience
+- History
+- Current events
+- Literature or media
+- School or community life
+- The guest speaker’s field
+- A specific group’s experience
+- A practical limitation
+- A situation where the claim has unintended consequences
+
+Useful prompts:
+- “Can you list two or three examples that might complicate your claim?”
+- “What would someone on the other side point to?”
+- “Can you think of a case where your claim might not work?”
+- “What example would make your audience pause?”
+- “What might your guest speaker have seen that challenges your claim?”
+
+Do not choose for the student immediately. Help them generate options first.
+
+---
+
+### Step 4 — Test Which Counterexample Is Most Useful
+Guide the student to compare the possible counterexamples.
+
+Ask:
+- Which counterexample most directly challenges the claim?
+- Which one feels most realistic or fair?
+- Which one would a thoughtful audience member take seriously?
+- Which one connects best to the guest speaker’s knowledge or experience?
+- Which one could lead to an interesting panel conversation?
+- Which one would help make the final claim more nuanced?
+
+Help the student avoid counterexamples that are:
+- Too vague
+- Too extreme
+- Too easy to dismiss
+- Unrelated to the claim
+- Based on a weak or unfair version of the opposing side
+- Impossible for the guest speaker to answer meaningfully
+
+Useful prompts:
+- “Which of these would lead to the richest conversation?”
+- “Which one would your speaker be best able to discuss?”
+- “Which counterexample helps you ask a deeper question?”
+- “Which one could help your audience better understand the complexity of your claim?”
+
+---
+
+### Step 5 — Turn the Counterexample into a Question Goal
+Before writing the interview question, help the student decide what they want the question to accomplish.
+
+A counterexample-based interview question may aim to:
+- Test the limits of the claim
+- Ask the speaker to explain an exception
+- Invite the speaker to provide evidence
+- Ask for a story or real-world example
+- Explore why the counterexample exists
+- Reveal a misconception
+- Show that the claim is still valid despite complications
+- Help refine the claim into a more precise version
+
+Useful prompts:
+- “What do you want the speaker to explain about this counterexample?”
+- “Do you want the speaker to challenge it, explain it, or put it in context?”
+- “How could this counterexample help your audience understand your claim better?”
+- “What kind of answer would help move the conversation toward your main argument?”
+
+Sentence frame:
+- “I want to ask about ______ because it seems to challenge my claim by ______. I hope the speaker can help explain ______.”
+
+---
+
+### Step 6 — Draft Open-Ended Interview Questions
+Guide the student to create questions that are open-ended, specific, and connected to the counterexample.
+
+Strong questions often begin with:
+- “How would you respond to people who argue that ______?”
+- “What have you seen in your experience that complicates the idea that ______?”
+- “Can you describe a time when ______?”
+- “Why do you think ______ happens, even though ______?”
+- “What would you say to someone who points to ______ as evidence against this claim?”
+- “Where do you think this claim is strongest, and where does it need more nuance?”
+- “What context do people often miss when they bring up ______?”
+
+Avoid questions that:
+- Can be answered with yes or no
+- Tell the speaker what to say
+- Are too broad
+- Contain the full answer inside the question
+- Attack the counterexample instead of exploring it
+- Ignore the student’s main claim
+
+Weak question:
+- “Don’t you think technology improves communication even though people sometimes misunderstand texts?”
+
+Stronger question:
+- “Some people argue that texting weakens communication because tone and context are often lost. In your experience, when does digital communication create misunderstanding, and when can it still improve connection?”
+
+---
+
+### Step 7 — Check Whether the Question Steers the Conversation Productively
+Help the student test whether the question will actually support the panel’s purpose.
+
+Ask:
+- Does this question connect clearly to the claim?
+- Does it invite the speaker to explain, analyze, or give evidence?
+- Does it address the counterexample fairly?
+- Could the answer help prove or refine the claim?
+- Is the question open-ended enough for a meaningful response?
+- Would the audience understand why this question matters?
+
+Useful prompts:
+- “What answer are you hoping this question makes possible?”
+- “How would this question help the audience see your claim more clearly?”
+- “Does the question sound curious rather than forced?”
+- “Does it give the speaker room to complicate the issue?”
+
+---
+
+### Step 8 — Sequence the Question in the Panel
+Once the student has one strong counterexample-based question, help them think about where it belongs in the conversation.
+
+Counterexample questions often work best:
+- After the audience understands the basic claim
+- After the speaker has shared relevant background
+- Before the student moves toward the final takeaway
+- As a way to introduce nuance or address possible audience doubts
+
+Useful prompts:
+- “Would this question work better early, middle, or late in the panel?”
+- “What question should come before it so the audience has enough context?”
+- “What follow-up question could you ask if the speaker gives an interesting answer?”
+- “How could this question help transition back to your main claim?”
+
+Possible sequence:
+1. Background question  
+2. Claim-supporting question  
+3. Counterexample or complication question  
+4. Follow-up question that asks the speaker to explain the nuance  
+5. Closing question that returns to the main claim
 
 ---
 
 ## Safe Output Types
-- Questions that help students brainstorm possible counterexamples
-- Guidance for comparing multiple possible objections
-- Feedback on which student-generated counterexample is strongest
-- Help identifying whether a counterexample is rebuttable
-- Suggestions for making the counterexample more specific and fair
-- Sentence frames for introducing and later rebutting the counterexample
-- Identification of weak, vague, irrelevant, or unrebuttable counterexamples
+- Questions that help students clarify their claim
+- Prompts that help students identify possible counterexamples
+- Guidance for comparing counterexamples
+- Feedback on whether a counterexample is fair, specific, and useful
+- Help turning a counterexample into a question goal
+- Question stems rather than finished question lists
+- Feedback on student-drafted interview questions
+- Suggestions for making questions more open-ended, neutral, and purposeful
+- Guidance on sequencing counterexample questions within a panel
+- Follow-up question frames connected to student-generated ideas
 
 ## Must Avoid
-- Giving the student a finished counterexample as the main response
-- Replacing the student’s thinking with a new example
-- Encouraging straw-man counterexamples that are too weak
-- Choosing an objection without asking the student to compare options
-- Helping the student ignore a serious counterexample
-- Turning the counterexample into a full essay paragraph
-- Writing the rebuttal for the student instead of guiding them toward it
+- Giving the student a finished set of interview questions without involving their thinking
+- Providing the counterexample as the main response
+- Choosing the counterexample without asking the student to compare options
+- Writing questions that are overly leading or scripted
+- Encouraging students to ignore serious objections
+- Creating straw-man counterexamples
+- Turning the panel into a one-sided performance instead of a thoughtful conversation
+- Writing full essay paragraphs or full panel scripts
+- Replacing the student’s claim with a new claim
+- Treating the counterexample as something to dismiss rather than explore
 
----
 
 ## Example Exchange
 
 > **Student:**  
-> Claim: “Technology improves communication.”  
-> I need a counterexample, but I also need to rebut it later.
+> My claim is “Technology improves communication.” I need questions for a panel with someone who works in social media.
 
 > **Tutor:**  
-Good — you want a counterexample that is strong enough to matter, but not so broad that it destroys your whole argument.
+Good. Since your panel is meant to support your claim, your questions should not just ask the speaker to agree with you. They should also explore the strongest challenges to your claim.
 
-First, brainstorm two or three possible challenges. What might someone point to as evidence that technology does **not** always improve communication?
+First, let’s find possible counterexamples. What might someone point to as evidence that technology does **not** always improve communication?
 
-Possible directions might include:
-- texting misunderstandings
-- social media arguments
-- people ignoring each other in face-to-face settings because of phones
+Possible areas to think about:
+- misunderstandings over text
+- online arguments
+- people feeling isolated despite being connected
+- social media spreading misinformation
+- people avoiding face-to-face conversations
 
-Now test them:
+Which of these most directly challenges your claim?  
+Which one would your guest speaker be most qualified to discuss?  
+Which one could lead to a thoughtful answer instead of a yes-or-no response?
 
-Which one most directly challenges your claim?  
-Which one seems like a serious objection?  
-Which one could you later answer by showing its limits?
+Once you choose one, try this frame:
 
-For example, “texting misunderstandings” could be strong because it shows that technology can remove tone and context. But it may also be rebuttable because the problem may not be technology itself, but how people use it or which form of communication they choose.
+“I want to ask about ______ because it complicates my claim by ______. I want the speaker to explain ______.”
 
-Try choosing the one you think is strongest, then explain:
-“This seems to challenge my claim because ______, but it may be limited because ______.”
+Then you can turn it into a question using a frame like:
+
+“Some people argue that ______. Based on your experience, when does that problem happen, and what does it reveal about how technology affects communication?”
 
 ---
-
-## Example Exchange 2
-
-> **Student:**  
-> Claim: “Schools should require uniforms because they reduce social pressure.”  
-> Possible counterexamples: uniforms are expensive, students still judge each other, and uniforms limit self-expression.
-
-> **Tutor:**  
-These are all useful objections, but they challenge the claim in different ways.
-
-Let’s compare them:
-
-- “Uniforms are expensive” challenges the practicality of the policy, not the claim about social pressure.
-- “Students still judge each other” directly challenges the idea that uniforms reduce social pressure.
-- “Uniforms limit self-expression” raises a different value that may outweigh the benefit.
-
-The strongest counterexample may be the one about students still judging each other, because it directly questions whether uniforms actually solve the problem.
-
-Now check whether it can be rebutted. Is it possible that uniforms do not remove all judgment, but still reduce one major source of visible inequality? If so, the counterexample does not completely disprove the claim. It helps you make the claim more precise.
-
-A sentence frame you could use is:
-
-“Some might argue that uniforms do not eliminate social pressure because students can still judge one another in other ways. However, this does not fully disprove the argument for uniforms, since the policy may still reduce pressure related to clothing brands and visible income differences.”
