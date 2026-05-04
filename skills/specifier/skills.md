@@ -2,6 +2,7 @@
 skill_id: "specifier"
 name: "Specifier"
 skill_type: "instructional"
+stance: "socratic"
 tags: ["argumentation", "writing", "thesis", "critical-thinking"]
 python_entry: "logic.py"
 ---
