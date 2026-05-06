@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Agent Console</title>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,24 +16,29 @@
     --text: #1a1a18;
     --text-muted: #6b6a66;
     --text-faint: #a09f9a;
-    --blue-bg: #e6f1fb; --blue-text: #0c447c; --blue-border: #378add;
-    --green-bg: #eaf3de; --green-text: #27500a; --green-border: #639922;
-    --purple-bg: #eeedfe; --purple-text: #3c3489; --purple-border: #7f77dd;
-    --red-bg: #fcebeb; --red-text: #791f1f; --red-border: #e24b4a;
-    --teal-bg: #e1f5ee; --teal-text: #085041; --teal-border: #1d9e75;
+    --blue-bg: #e6f1fb; --blue-text: #0c447c;
+    --green-bg: #eaf3de; --green-text: #27500a;
+    --purple-bg: #eeedfe; --purple-text: #3c3489;
+    --red-bg: #fcebeb; --red-text: #791f1f;
+    --teal-bg: #e1f5ee; --teal-text: #085041;
     --radius: 8px; --radius-lg: 12px;
     --mono: 'Courier New', Courier, monospace;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #1a1a18; --surface: #242422; --border: #38373280; --border-strong: #555450;
-      --text: #f0ede6; --text-muted: #a09f9a; --text-faint: #6b6a66;
-      --blue-bg: #042c53; --blue-text: #b5d4f4; --blue-border: #185fa5;
-      --green-bg: #173404; --green-text: #c0dd97; --green-border: #3b6d11;
-      --purple-bg: #26215c; --purple-text: #cecbf6; --purple-border: #534ab7;
-      --red-bg: #501313; --red-text: #f7c1c1; --red-border: #a32d2d;
-      --teal-bg: #04342c; --teal-text: #9fe1cb; --teal-border: #0f6e56;
+      --bg: #1a1a18;
+      --surface: #242422;
+      --border: #38373280;
+      --border-strong: #555450;
+      --text: #f0ede6;
+      --text-muted: #a09f9a;
+      --text-faint: #6b6a66;
+      --blue-bg: #042c53; --blue-text: #b5d4f4;
+      --green-bg: #173404; --green-text: #c0dd97;
+      --purple-bg: #26215c; --purple-text: #cecbf6;
+      --red-bg: #501313; --red-text: #f7c1c1;
+      --teal-bg: #04342c; --teal-text: #9fe1cb;
     }
   }
 
@@ -43,265 +49,327 @@
     color: var(--text);
     min-height: 100vh;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     padding: 2rem 1rem;
   }
 
   .shell {
     width: 100%;
-    max-width: 720px;
+    max-width: 780px;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
-  /* header */
-  .header { display: flex; align-items: center; gap: 10px; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-faint); transition: background 0.3s; }
-  .dot.active { background: #639922; animation: blink 1.4s infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
-  .header-title { font-size: 13px; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--text-faint);
+  }
+
+  .dot.active { background: #639922; animation: blink 1.2s infinite; }
+  @keyframes blink { 50% { opacity: 0.3; } }
+
+  .header-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text-muted);
+  }
 
   /* skills */
-  .section-label { font-size: 11px; color: var(--text-faint); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 6px; }
-  .skills-row { display: flex; flex-wrap: wrap; gap: 6px; }
-  .skill-chip {
-    font-size: 11px; padding: 3px 10px; border-radius: 99px;
-    border: 0.5px solid var(--border); color: var(--text-muted);
-    background: var(--surface); transition: all 0.2s;
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
   }
-  .skill-chip.lit { border-color: var(--green-border); color: var(--green-text); background: var(--green-bg); }
+
+  .skill-chip {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: 0.15s;
+    user-select: none;
+  }
+
+  .skill-chip:hover {
+    border-color: var(--border-strong);
+  }
+
+  .skill-chip.lit {
+    background: var(--green-bg);
+    color: var(--green-text);
+    border-color: var(--green-text);
+  }
 
   /* input */
-  .input-row { display: flex; gap: 8px; }
-  .input-row input {
-    flex: 1; height: 38px; padding: 0 12px;
-    border: 0.5px solid var(--border-strong); border-radius: var(--radius);
-    background: var(--surface); color: var(--text); font-size: 14px; outline: none;
-    transition: box-shadow 0.15s;
+  .input-row {
+    display: flex;
+    gap: 8px;
   }
-  .input-row input:focus { box-shadow: 0 0 0 2px var(--blue-border); }
-  .input-row button {
-    height: 38px; padding: 0 16px; border-radius: var(--radius);
-    border: 0.5px solid var(--border-strong); background: var(--surface);
-    color: var(--text); font-size: 13px; cursor: pointer; white-space: nowrap; transition: background 0.15s;
+
+  input {
+    flex: 1;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+    outline: none;
   }
-  .input-row button:hover { background: var(--bg); }
-  .input-row button:active { transform: scale(0.98); }
-  .input-row button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  button {
+    padding: 0 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 0.5;
+  }
 
   /* log */
-  .log { border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+  .log {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
   .log-header {
-    padding: 10px 14px; background: var(--bg);
-    border-bottom: 0.5px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .log-header span { font-size: 12px; color: var(--text-muted); }
-  .log-clear { font-size: 11px; color: var(--text-muted); cursor: pointer; border: none; background: none; padding: 0; }
-  .log-clear:hover { color: var(--text); }
+
   .log-body {
-    min-height: 280px; max-height: 500px; overflow-y: auto;
-    padding: 12px 14px; display: flex; flex-direction: column; gap: 10px;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 12px;
     background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-  .empty { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 200px; color: var(--text-faint); font-size: 13px; }
+
+  .empty {
+    color: var(--text-faint);
+    text-align: center;
+    margin-top: 40px;
+  }
 
   /* entries */
   .entry { display: flex; flex-direction: column; gap: 4px; }
-  .entry-meta { display: flex; align-items: center; gap: 8px; }
-  .badge { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 99px; letter-spacing: 0.04em; }
+
+  .badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    align-self: flex-start;
+  }
+
   .badge.user    { background: var(--blue-bg);   color: var(--blue-text); }
-  .badge.skill   { background: var(--green-bg);  color: var(--green-text); }
   .badge.agent   { background: var(--purple-bg); color: var(--purple-text); }
+  .badge.skill   { background: var(--green-bg);  color: var(--green-text); }
   .badge.error   { background: var(--red-bg);    color: var(--red-text); }
   .badge.done    { background: var(--teal-bg);   color: var(--teal-text); }
-  .entry-time { font-size: 11px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
-  .entry-body {
-    font-size: 13px; line-height: 1.6; padding: 7px 10px;
-    border-radius: var(--radius); background: var(--bg);
-    border-left: 2px solid var(--border); white-space: pre-wrap; word-break: break-word;
-  }
-  .entry-body.user  { border-color: var(--blue-border); }
-  .entry-body.skill { border-color: var(--green-border); font-family: var(--mono); font-size: 12px; }
-  .entry-body.agent { border-color: var(--purple-border); }
-  .entry-body.error { border-color: var(--red-border); }
-  .entry-body.done  { border-color: var(--teal-border); }
 
-  /* spinner */
-  .spinner { display: inline-block; width: 12px; height: 12px; border: 1.5px solid var(--border); border-top-color: var(--text-muted); border-radius: 50%; animation: spin 0.7s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
+  .entry-body {
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    background: var(--bg);
+    border-left: 3px solid var(--border);
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+
+  .entry-body.user  { border-color: var(--blue-text); }
+  .entry-body.agent { border-color: var(--purple-text); }
+  .entry-body.error { border-color: var(--red-text); }
+  .entry-body.done  { border-color: var(--teal-text); }
 </style>
 </head>
+
 <body>
 <div class="shell">
 
   <div class="header">
     <div class="dot" id="dot"></div>
-    <span class="header-title">Agent console</span>
+    <div class="header-title">Agent console</div>
   </div>
 
+  <!-- skills -->
   <div>
-    <p class="section-label">Skills loaded</p>
-    <div class="skills-row" id="skills-row">
-      <span class="skill-chip" style="color:var(--text-faint)">Loading…</span>
-    </div>
+    <div style="font-size:11px; color:var(--text-faint); margin-bottom:6px;">Skills</div>
+    <div class="skills-row" id="skills-row">Loading...</div>
   </div>
 
+  <div style="font-size:11px; color:var(--text-faint); margin-bottom:6px;">
+    Active skill: <span id="active-skill">none</span>
+  </div>  
+
+  <!-- input -->
   <div class="input-row">
-    <input id="claim" type="text" placeholder="Enter your claim…" />
-    <button id="run-btn" onclick="runAgent()">Run agent →</button>
+    <input id="claim" placeholder="Enter your request..." />
+    <button id="run-btn" onclick="runAgent()">Run</button>
   </div>
 
+  <!-- log -->
   <div class="log">
     <div class="log-header">
-      <span>Conversation log</span>
-      <button class="log-clear" onclick="clearLog()">Clear</button>
+      <span>Conversation</span>
+      <button onclick="clearLog()">Clear</button>
     </div>
-    <div class="log-body" id="log-body">
-      <div class="empty" id="empty">No runs yet — enter a claim above</div>
-    </div>
+    <div class="log-body" id="log"></div>
   </div>
 
 </div>
 
 <script>
-  let entries = [];
-  let running = false;
+let selectedSkill = null;
+let running = false;
+let history = [];   // persists across turns
+let entries = [];   // display entries
 
-  function ts() {
-    return new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+function esc(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function add(type, label, body) {
+  entries.push({ type, label, body });
+  render();
+  // auto-scroll to bottom
+  const log = document.getElementById("log");
+  log.scrollTop = log.scrollHeight;
+}
+
+function render() {
+  const el = document.getElementById("log");
+  if (!entries.length) {
+    el.innerHTML = `<div class="empty">No logs yet</div>`;
+    return;
   }
 
-  function addEntry(type, label, body) {
-    entries.push({type, label, body, time: ts()});
-    render();
-  }
+  el.innerHTML = entries.map(e => `
+    <div class="entry">
+      <span class="badge ${e.type}">${esc(e.label)}</span>
+      <div class="entry-body ${e.type}">${esc(e.body)}</div>
+    </div>
+  `).join("");
+}
 
-  function render() {
-    const el = document.getElementById('log-body');
-    if (!entries.length) {
-      el.innerHTML = '<div class="empty" id="empty">No runs yet — enter a claim above</div>';
-      return;
-    }
-    el.innerHTML = entries.map(e => `
-      <div class="entry">
-        <div class="entry-meta">
-          <span class="badge ${e.type}">${esc(e.label)}</span>
-          <span class="entry-time">${e.time}</span>
-        </div>
-        <div class="entry-body ${e.type}">${esc(e.body)}</div>
-      </div>
-    `).join('');
-    el.scrollTop = el.scrollHeight;
-  }
+function clearLog() {
+  entries = [];
+  history = [];   // reset conversation history too
+  render();
+}
 
-  function esc(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  }
+function setRunning(v) {
+  running = v;
+  document.getElementById("dot").classList.toggle("active", v);
+  document.getElementById("run-btn").disabled = v;
+}
 
-  function clearLog() {
-    entries = [];
-    render();
-  }
-
-  function setRunning(val) {
-    running = val;
-    document.getElementById('dot').classList.toggle('active', val);
-    const btn = document.getElementById('run-btn');
-    btn.disabled = val;
-    btn.textContent = val ? 'Running…' : 'Run agent →';
-  }
-
-  function lightSkill(name) {
-    document.querySelectorAll('.skill-chip').forEach(c => {
-      c.classList.toggle('lit', c.dataset.name === name);
-    });
-    setTimeout(() => document.querySelectorAll('.skill-chip').forEach(c => c.classList.remove('lit')), 1400);
-  }
-
-  // Parse the flat conversation string into log entries
-  function parseConversation(conv, userInput) {
-    const lines = conv.split('\n');
-    let currentSkill = null;
-    let buffer = [];
-
-    function flush(type, label) {
-      const body = buffer.join('\n').trim();
-      if (body) addEntry(type, label, body);
-      buffer = [];
-    }
-
-    for (const line of lines) {
-      const skillMatch = line.match(/^Agent used (.+?):$/);
-      if (skillMatch) {
-        flush(currentSkill ? 'skill' : 'agent', currentSkill ? `skill: ${currentSkill}` : 'agent');
-        currentSkill = skillMatch[1];
-        lightSkill(currentSkill);
-      } else if (line.startsWith(`User: ${userInput}`)) {
-        // skip — already logged
-      } else {
-        buffer.push(line);
-      }
-    }
-    flush(currentSkill ? 'skill' : 'agent', currentSkill ? `skill: ${currentSkill}` : 'agent');
-  }
-
-  async function runAgent() {
-    const input = document.getElementById('claim');
-    const claim = input.value.trim();
-    if (!claim || running) return;
-
-    setRunning(true);
-    addEntry('user', 'user', claim);
-
-    try {
-      const res = await fetch('/run', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({input: claim})
-      });
-
-      const data = await res.json();
-
-      if (data.error) {
-        addEntry('error', 'error', data.error);
-      } else {
-        parseConversation(data.conversation, claim);
-        addEntry('done', 'done', 'Agent finished.');
-      }
-    } catch (err) {
-      addEntry('error', 'error', `Network error: ${err.message}\n\nMake sure Flask is running on http://localhost:5000`);
-    }
-
-    setRunning(false);
-    input.value = '';
-  }
-
-  document.getElementById('claim').addEventListener('keydown', e => {
-    if (e.key === 'Enter') runAgent();
+function selectSkill(name) {
+  selectedSkill = name;
+  document.querySelectorAll(".skill-chip").forEach(c => {
+    c.classList.toggle("lit", c.dataset.name === name);
   });
+}
 
-  // Load skills on page load
-  async function loadSkills() {
-    const row = document.getElementById('skills-row');
-    try {
-      const res = await fetch('/skills');
-      const data = await res.json();
-      if (data.skills && data.skills.length) {
-        row.innerHTML = data.skills.map(s => `
-          <span class="skill-chip" data-name="${esc(s.name)}" title="${esc(s.description)}">${esc(s.name)}</span>
-        `).join('');
-      } else {
-        row.innerHTML = '<span class="skill-chip">No skills found</span>';
-      }
-    } catch {
-      row.innerHTML = '<span class="skill-chip" style="color:var(--red-text)">Could not reach Flask server</span>';
-    }
+async function loadSkills() {
+  try {
+    const res = await fetch("/skills");
+    const data = await res.json();
+
+    const row = document.getElementById("skills-row");
+
+    // add AUTO manually at the front
+    const allSkills = [
+      { name: "auto" },
+      ...data.skills
+    ];
+
+    row.innerHTML = allSkills.map(s => `
+      <div class="skill-chip"
+           data-name="${esc(s.name)}"
+           onclick="selectSkill('${esc(s.name)}')">
+        ${esc(s.name)}
+      </div>
+    `).join("");
+
+    selectSkill("auto"); // default to auto
+  } catch (err) {
+    document.getElementById("skills-row").textContent = "Failed to load skills";
+  }
+}
+
+async function runAgent() {
+  const input = document.getElementById("claim").value.trim();
+  if (!input || running) return;
+
+  if (!selectedSkill) {
+    add("error", "error", "Select a skill first");
+    return;
   }
 
-  loadSkills();
+  setRunning(true);
+  add("user", "user", input);
+
+  try {
+    const res = await fetch("/run", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        input,
+        skill: selectedSkill,
+        history          // send current history to server
+      })
+    });
+
+    const data = await res.json();
+
+    if (data.error) {
+      add("error", "error", data.error);
+    } else {
+      history = data.history;          // update local history from server response
+      add("agent", "agent", data.result);  // show only the latest assistant reply
+      document.getElementById("active-skill").textContent = data.skill_used || selectedSkill;
+    }
+  } catch (err) {
+    add("error", "error", "Network error: " + err.message);
+  }
+
+  setRunning(false);
+  document.getElementById("claim").value = "";
+}
+
+document.getElementById("claim").addEventListener("keydown", e => {
+  if (e.key === "Enter") runAgent();
+});
+
+loadSkills();
 </script>
+
 </body>
 </html>

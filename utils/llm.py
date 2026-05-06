@@ -1,6 +1,5 @@
 from google import genai
 from google.genai import types
-import pathlib
 from pathlib import Path
 
 FOLDER_NAME = "Class_Materials/PDF_Readings"

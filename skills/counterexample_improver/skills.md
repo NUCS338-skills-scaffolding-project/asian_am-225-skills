@@ -2,8 +2,15 @@
 skill_id: "counter_example"
 name: "Counterexample"
 skill_type: "instructional"
+stance: "socratic"
 tags: ["argumentation", "writing", "logic", "critical-thinking", "rebuttal"]
-python_entry: "logic.py"
+course_types: ["humanities"]
+learning_goal_tags:
+  - "construct-arguments"
+  - "engage-objections"
+  - "surface-assumptions"
+  - "identify-evidence"
+  - "interpret-evidence"
 ---
 
 # Counterexample For Interview

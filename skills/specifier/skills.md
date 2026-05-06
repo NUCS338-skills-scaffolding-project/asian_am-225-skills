@@ -4,7 +4,10 @@ name: "Specifier"
 skill_type: "instructional"
 stance: "socratic"
 tags: ["argumentation", "writing", "thesis", "critical-thinking"]
-python_entry: "logic.py"
+course_types: ["humanities"]
+learning_goal_tags:
+  - "construct-arguments"
+  - "engage-objections"
 ---
 
 # Specifier

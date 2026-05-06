@@ -2,9 +2,17 @@
 skill_id: "reading_discussor"
 name: "Reading Discussor"
 skill_type: "instructional"
+stance: "socratic"
 tags: ["argumentation", "writing", "evidence", "critical-thinking", "analysis"]
-python_entry: "logic.py"
+course_types: ["humanities"]
+learning_goal_tags:
+  - "interpret-evidence"
+  - "identify-evidence"
+  - "decompose-arguments"
+  - "construct-arguments"
 ---
+
+
 
 # Claim Verification
 

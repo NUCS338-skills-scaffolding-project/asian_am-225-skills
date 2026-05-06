@@ -2,9 +2,19 @@
 skill_id: "idea_organizer"
 name: "Idea Organizer"
 skill_type: "instructional"
+stance: "socratic"
 tags: ["argumentation", "writing", "logic", "critical-thinking", "organization"]
-python_entry: "logic.py"
+course_types: ["humanities"]
+learning_goal_tags:
+  - construct-arguments
+  - structure-paragraphs
+  - decompose-arguments
+  - identify-evidence
+  - interpret-evidence
+  - surface-assumptions
+  - evaluate-reasoning
 ---
+
 
 # Idea Organizer
 

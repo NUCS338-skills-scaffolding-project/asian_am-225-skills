@@ -1,0 +1,6 @@
+  claim: (
+    Asian Americans are treated as perpetual foreigners in the United States, regardless of how long they or their families have lived here.
+  ),
+  evidence: (
+    A personal experience of being asked 'where are you really from?' at a university event despite being born and raised in Chicago.
+  )

@@ -1,10 +1,10 @@
+#app.py
+
 from flask import Flask, request, jsonify, send_from_directory
-import json
-import os
+from demo import run_agent, SKILLS 
 
 # --- import your agent ---
 # f the import path to match your project structure
-from fullDemo import run_agent, SKILLS  # assumes agent.py is in the same folder
 
 app = Flask(__name__, static_folder=".")
 
@@ -28,13 +28,19 @@ def list_skills():
 def run():
     data = request.get_json()
     user_input = data.get("input", "").strip()
+    selected_skill = data.get("skill", "").strip()
+    history = data.get("history", [])  # client sends history each time
 
     if not user_input:
         return jsonify({"error": "No input provided"}), 400
+    if not selected_skill:
+        return jsonify({"error": "No skill selected"}), 400
+    if selected_skill not in SKILLS and selected_skill != "auto":
+        return jsonify({"error": f"Invalid skill: {selected_skill}"}), 400
 
     try:
-        result = run_agent(user_input)
-        return jsonify({"conversation": result})
+        result = run_agent(user_input, skill=selected_skill, history=history)
+        return jsonify(result)  # result["history"] has the updated history
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
