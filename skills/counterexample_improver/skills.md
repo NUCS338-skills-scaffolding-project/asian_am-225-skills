@@ -38,10 +38,8 @@ The goal is not for the tutor to give students a finished counterexample or a co
 - Student needs help coming up with counterexamples to a claim
 - Student is preparing questions for a panel or guest speaker
 - Student wants interview questions that help prove or complicate their claim
-- Student has an arguable claim but needs help testing it
 - Student asks for “counterexamples,” “opposing views,” “exceptions,” or “complications”
 - Student needs help turning an objection into a question
-- Student wants questions that steer a conversation toward supporting their claim
 - Student has possible questions but needs help making them deeper, more focused, or more useful
 
 ---
