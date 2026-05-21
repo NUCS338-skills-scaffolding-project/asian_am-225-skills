@@ -1,6 +1,6 @@
 ---
-skill_id: "counter_example"
-name: "Counterexample"
+skill_id: "counter-example"
+name: "Counter- xample"
 skill_type: "instructional"
 stance: "socratic"
 tags: ["argumentation", "writing", "logic", "critical-thinking", "rebuttal"]
@@ -11,6 +11,10 @@ learning_goal_tags:
   - "surface-assumptions"
   - "identify-evidence"
   - "interpret-evidence"
+trigger_signals:
+  - "student-needs-counterexample"
+  - "student-asks-for-opposing-view"
+  - "student-wants-to-challenge-claim"
 ---
 
 # Counterexample For Interview
