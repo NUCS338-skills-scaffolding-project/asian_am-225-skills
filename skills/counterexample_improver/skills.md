@@ -1,6 +1,6 @@
 ---
-skill_id: "counter-example"
-name: "Counter- xample"
+skill_id: "counter-example-interview-questions"
+name: "Counter Example Interview Questions"
 skill_type: "instructional"
 stance: "socratic"
 tags: ["argumentation", "writing", "logic", "critical-thinking", "rebuttal"]
