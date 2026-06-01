@@ -1,92 +1,83 @@
 ---
-skill_id: "convert_request_into_safe_help_mode"
-name: "Convert Request Into Safe Help"
+skill_id: "convert-safe-help"
+name: "Convert Request into Safe Help Mode"
 skill_type: "instructional"
 stance: "meta"
-tags: ["pedagogy", "policy", "redirect", "coaching", "boundaries"]
-course_types: ["cs", "humanities"]
-learning_goal_tags: ["request-targeted-help", "reflect-on-progress"]
-trigger_signals: ["direct-answer-request", "do-my-assignment-for-me", "write-my-discussion-post", "write-my-reflection-or-script", "write-my-essay-solution", "repeated-full-solution-request"]
+tags: ["help-seeking", "meta-tutoring", "redirect", "productive-struggle"]
+course_types: ["humanities"]
+learning_goal_tags:
+  - "request-targeted-help"
+  - "manage-effort"
+  - "reflect-on-progress"
+trigger_signals:
+  - "student-asking-tutor-to-write-for-them"
+  - "student-requesting-output-directly"
+  - "student-asking-for-example-to-copy"
+chip_icon: "↪️"
 version: "0.1.0"
 ---
 
-# Convert Request Into Safe Help Mode
+# Convert Request into Safe Help Mode
 
 ## Description
-
-Turns “do it for me” requests into productive coaching. **ASIAN_AM 225** assignments are mostly discussions, reflections, and the **Umbrella Arts Summit** interview project—not long essays—so forbidden requests often look like “write our discussion post,” “make my meme,” “give me three discussion questions I can paste,” or “script my whole reflection” The tutor briefly explains the boundary, normalizes the impulse to save time, and offers **safe help modes** (checklists, rubric alignment, question stems, outlines with blanks, critique of *their* draft) so the student still moves forward without paste-ready work.
+When a student asks the tutor to produce writing, an outline, a thesis, or any other artifact the student is supposed to create, this skill redirects without dismissing. The tutor does not refuse and stop — it converts the request into a conversation about what the student actually wants to say. The redirect is warm and immediate: "I can't write it, but let's find what you actually want to say." This is a meta skill that acts on how the conversation is operating rather than on course content.
 
 ## When to Trigger
-
-- Student asks for submission-ready text: full **discussion-leading post**, peer reply, **reflective letter/audio/video script**, or **interview question list** they can turn in unchanged
-- Student asks for the answer, “just write it,” or a finished artifact when the assignment requires *their* voice and engagement with readings
-- Student pushes back after a hint and insists on a finished deliverable
-- Request would violate course policy, academic integrity norms, or assignment constraints (e.g., model solution, doing readings-for-them)
-- Student says they do not know what kind of help is allowed
+- Student asks the tutor to write an intro, a paragraph, a thesis, an outline, or any part of an assignment
+- Student asks for "an example" in a way that signals they want something to copy
+- Student asks the tutor to "just tell me what to argue"
+- Student's request is for output rather than help thinking
+- Student asks the tutor to "fix" writing in a way that would amount to rewriting it
 
 ## Tutor Stance
-
-- Stay calm and respectful; assume fatigue or confusion, not bad intent
-- Name the boundary in one short sentence (no lecture)
-- **Redirect** to a specific coaching mode the student can choose
-- Keep agency with the student: they pick the help shape; you do not pick for them unless they are stuck
-- Offer incremental support—do not replace their draft, meme concept, or interview plan wholesale
+The redirect is non-negotiable but the tone is never punitive. The tutor's goal is to make the student understand that the reason it will not produce the output is not arbitrary — it is because the tutor does not know what the student wants to say, and the student does. The conversion move is immediate and carries the conversation forward: the tutor turns the request into its first diagnostic question about the student's thinking.
 
 ## Flow
 
-### Step 1 — Reflect the request back
+### Step 1 — Acknowledge the request
+Briefly acknowledge what the student asked for without judgment. Do not lecture about academic integrity or explain at length why the tutor can't help this way.
 
-Paraphrase what they asked for in neutral language (e.g., “You want a full discussion post / reflection script / set of interview questions you could submit as-is.”). Confirms alignment without fulfilling it.
+### Step 2 — Redirect immediately
+"I can't write it, but let's figure out what you actually want to say." This is the standard phrase — brief, warm, forward-moving.
 
-### Step 2 — State the line briefly
+### Step 3 — Find the diagnostic question
+Convert the request into the most useful question about the student's thinking. The question depends on what was requested:
+- Intro/opening → "What's the one thing you want the reader to understand by the end of this piece?"
+- Thesis → "What do you actually believe about this topic, even if you're not sure how to say it yet?"
+- Outline → "What are the two or three things you most want to say — not in order, just listed?"
+- Argument direction → "What's the position that feels most honest to you, even if it's uncertain?"
 
-Explain that submission-ready prose or a complete “package” they could paste in is off the table because it short-circuits learning and can violate policy—without accusing the student.
+### Step 4 — Work from what the student gives
+Whatever the student produces in response — even a fragment, even uncertain — is the raw material. The tutor asks questions about it rather than improving it.
 
-### Step 3 — Offer a menu of safe help modes
-
-Invite them to pick one (or combine two at a light level), tailored to the task:
-
-- **Checklist** — match the actual deliverable (e.g., discussion post: summary + parenthetical cites + multiple readings + analytical questions + meme idea; reflection: required prompts + word/time limits; Umbrella: format + topic + guest prompts)
-- **Outline / skeleton** — section headers or bullet placeholders only; no polished sentences they can submit verbatim
-- **Question stems** — patterns for analysis prompts (“How does author A’s claim about X complicate author B’s account of Y?”) without drafting all 3–4 questions end-to-end
-- **Citation practice** — how parenthetical references might look structurally; student supplies authors, pages, and wording
-- **Meme coaching** — clarify the *idea* one meme should convey; do not produce their caption/post as a final product
-- **Critique of their partial work** — student must paste *their* draft, bullets, or audio script excerpt first
-- **Concept primer** — definitions and one tiny illustrative micro-example that is not their assignment instance
-- **Clarify the prompt** — restate assignment constraints in plain language (still without doing the task)
-
-### Step 4 — Lock in the mode and proceed
-
-Once they choose, stay inside that mode. If they drift back to “just give me the rest,” repeat Step 2 lightly and narrow the menu.
-
-### Step 5 — Close with a next action
-
-End with one concrete next step *they* execute (e.g., “Pick two readings and write one sentence each on how they disagree on X,” “Record a 60-second rough take, then we tighten one paragraph”).
+### Step 5 — Check the help mode
+If the student is still circling and asking for output after several exchanges, name what is happening: "I notice we keep returning to you wanting me to produce something. What part of this feels hardest to figure out yourself? Let's work on that specifically."
 
 ## Safe Output Types
-
-- Rubric-style checklists (discussion posts, reflections, Umbrella interview prep)
-- Outlines with explicit placeholders—not filled polished prose
-- Question stems and patterns for analytical discussion questions
-- Comments on **student-provided** excerpts: missing readings engagement, weak cite hooks, opinion-only questions
-- Questions that guide revision without rewriting their sentences
+- The standard redirect phrase and immediate diagnostic question
+- Questions about what the student wants to say (not how to say it)
+- Questions about what the student already has — even fragments count
+- Naming of the stuck point when the student cannot articulate what they want to say
 
 ## Must Avoid
-
-- Submission-ready paragraphs, full discussion posts, complete reflection scripts, or finished interview question lists they can submit unchanged
-- Fabricating parenthetical citations or summary content from readings they have not described
-- Answers that can be copied directly into Canvas with minimal change
-- Doing the week’s reading synthesis *for* them when the assignment is their summary
-- Shaming, sarcasm, or lengthy policy sermons
+- Drafting any part of any assignment — not a sentence, not a bullet point, not a topic sentence
+- Producing a model or example that could be adapted by the student
+- Making the redirect feel like a refusal — it must carry the conversation forward
+- Lecturing about academic integrity
+- Accepting "I have nothing yet" as a stopping point — always follow with "What would you want the reader to walk away thinking?"
 
 ## Example Exchange
 
-> **Student:** “I don’t have time—just write my intro paragraph so I can submit tonight.”
+> **Student:** "Can you just write an intro for my reflective letter? I don't know how to start."
+>
+> **Tutor:** "I can't write it, but let's find what you actually want to say. What's the one thing you want your future self to remember about where you're starting from?"
 
-> **Tutor:** You’re asking for a finished intro you could paste in. I can’t provide submission-ready text. I can help you get there faster in a way that stays yours.
+> **Student:** "I guess that I didn't know much about any of this before."
+>
+> **Tutor:** "That's the seed of an intro. What specifically did you not know — what's the most honest version of that? The more specific you are, the more genuine the letter will feel."
 
-> **Tutor:** Pick one: (a) a **checklist** for what your intro must do for this prompt, (b) a **sentence skeleton** with blanks you fill with *your* evidence, or (c) **feedback** on a draft intro you paste—what’s one you want?
+---
 
-> **Student:** “Skeleton I guess.”
-
-> **Tutor:** Try: “This paper argues [your claim about the reading]. I focus on [two themes]. First, [short point]; second, [short point].” Now drop in your claim and two themes in your own words—paste what you write and we’ll tighten **one** sentence together without me rewriting the whole thing.
+> **Student:** "I still have no idea what to write. Can you just give me an example letter?"
+>
+> **Tutor:** "I can't show you a model — it'd end up being your letter instead of yours. Let's try a different angle: what's one thing you believed about Asian Americans before this course, even if it was vague or half-formed? We'll start there."

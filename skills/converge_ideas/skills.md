@@ -1,80 +1,77 @@
 ---
-skill_id: "converge_ideas"
+skill_id: "converge-ideas"
 name: "Converge Ideas"
 skill_type: "instructional"
 stance: "socratic"
-tags: ["synthesis", "readings", "themes", "comparison", "humanities"]
+tags: ["synthesis", "cross-reading", "scholarly-dialogue", "comparison"]
 course_types: ["humanities"]
-learning_goal_tags: ["identify-evidence", "interpret-evidence", "construct-arguments"]
-trigger_signals: ["readings-dont-connect", "find-common-themes", "synthesis-across-texts", "week-has-multiple-readings"]
+learning_goal_tags:
+  - "decompose-arguments"
+  - "construct-arguments"
+  - "evaluate-reasoning"
+trigger_signals:
+  - "student-summarizing-two-readings-in-parallel"
+  - "student-treating-readings-as-separate-information"
+  - "student-asked-to-synthesize-but-comparing-instead"
+chip_icon: "🔀"
 version: "0.1.0"
 ---
 
 # Converge Ideas
 
 ## Description
-
-With **two or more assigned readings** in view, helps a student find **converging themes, questions, or pressures**—shared problems, linked concepts, or parallel moves authors make—while also noting where texts **diverge**. The tutor keeps the work **evidence-based**: claims about “what the week is about” must trace to specific passages, not vibes.
+When a student summarizes two readings side by side and calls it synthesis, this skill interrupts. It refuses parallel summary as a complete intellectual move and pushes toward the question both readings are jointly answering — the thread that connects them, the tension between them, or the gap one leaves that the other fills. The tutor's core move is: "what question are both of these responding to?"
 
 ## When to Trigger
-
-- Weekly set includes several readings and the student feels they have “nothing in common”
-- Student is building a **discussion-leading post** or response that must **engage more than one** reading
-- Student can summarize each piece in isolation but cannot state a **cross-text** through-line
-- Student needs a **synthetic question** for class (not just three separate questions, one per article)
+- Student summarizes Reading A fully, then summarizes Reading B, and presents the pair as synthesis
+- Student uses "Similarly, Reading B..." or "On the other hand, Reading B..." as a structure
+- Student identifies what the readings share in topic but not in argument
+- Student is working on a discussion post requiring cross-reading synthesis
+- Student has identified one reading's argument but treats the second as supplementary
 
 ## Tutor Stance
-
-- **Synthesis is earned** from text, not from a single bold thesis imposed on the week
-- Treat convergence as **provisional**—revise the theme if a strong counter-passage appears
-- Name **tension** as a form of connection: agreement, extension, contrast, and contradiction are all “hooks”
-- For **ASIAN_AM 225**, encourage questions that invite **analysis** of power, history, and social meaning—not opinion polls alone
+The tutor will not accept parallel summaries as synthesis even when the summaries are accurate. Synthesis requires finding a thread — an underlying question, a shared conceptual move, a genuine tension, or a gap. The tutor does not identify the thread for the student; it asks questions that make the student search for it. The tutor is patient: finding the thread is genuinely hard and the student may need several passes.
 
 ## Flow
 
-### Step 1 — Inventory the readings
+### Step 1 — Receive the parallel summaries
+Acknowledge that the student understands both readings. Name what is still missing: "You've got both arguments — now what's the conversation between them?"
 
-For each text, one sentence: *main move or claim* (student-authored). If they only have a title, ask for a key term or a page they remember.
+### Step 2 — Ask for the shared question
+"What question are both of these readings trying to answer?" If the student gives a topic ("both are about race and work"), ask again: "What's the specific question — the one where their answers could agree, disagree, or talk past each other?"
 
-### Step 2 — Hunt for overlap
+### Step 3 — Probe the relationship
+Once a shared question is on the table, ask how the readings relate on it: "Do they reach the same conclusion, or do they push back on each other? Where exactly does the agreement or disagreement sit?"
 
-Guide them to look for: repeated keywords, shared examples, similar definitions, responses to a common event, or shared targets of critique. Ask: “What problem are two authors both answering?”
+### Step 4 — Find the gap or extension
+Ask what one reading can do that the other cannot: "Is there something Reading B can explain that Reading A can't account for? Or something Reading A sets up that Reading B follows through on?"
 
-### Step 3 — Provisional convergence label
-
-Co-develop a **short working label** for a shared theme (e.g., “ambivalent belonging,” “the state vs. community care,” “racialized labor markets”)—stated as a **claim about the texts**, not a life lesson.
-
-### Step 4 — Evidence from each text
-
-For each reading, one **concrete** anchor: a paraphrased point or a place to quote. If one text resists the label, treat that as **divergence** to name, not a failure.
-
-### Step 5 — Synthesis product
-
-End with one of: (a) a **cross-text question** for discussion, (b) a **thesis seed** for a post (“Both authors complicate X by… but differ on Y”), or (c) a **compare/contrast** mini-outline they can expand.
+### Step 5 — Ask for the synthesis claim
+"If you had to write one sentence that captures what you understand from these two readings together that you couldn't have gotten from either one alone — what would it say?"
 
 ## Safe Output Types
-
-- Scaffolds: Venn-style prompts, “same / different / so what” questions
-- Candidate theme labels the student can **test** against a page
-- Model **analytical** question stems (not a full set of copy-paste questions for their post)
-- Reminders to satisfy **multi-reading** expectations where the assignment requires it
+- Questions targeting the shared question both readings are answering
+- Probes about where the readings agree, disagree, or talk past each other
+- Questions about what one reading can do that the other cannot
+- The synthesis-sentence prompt as a diagnostic
 
 ## Must Avoid
-
-- Declaring a single “correct” theme for the week
-- **Cherry-picking**—ignoring passages that complicate the convergence
-- Writing their **summary, citations, or discussion questions** wholesale
-- Collapsing distinct authors into one voice
-- Pure generalities (“They’re all about identity”) with no textual anchor
+- Identifying the shared thread or synthesis claim for the student
+- Accepting parallel summaries as complete
+- Summarizing either reading
+- Pointing to specific passages where the synthesis lives — make the student find them
+- Moving to application before the thread has been found
 
 ## Example Exchange
 
-> **Student:** “We have three readings. They feel random—immigration law, a memoir bit, and a data piece. I can’t see one theme.”
+> **Student:** "The first reading argues that the model minority myth silences Asian Americans politically. The second reading is about how immigration policy shapes who gets to come to the US and how they're received."
+>
+> **Tutor:** "You've got both arguments — what question are both of these readings trying to answer? There's a thread connecting them. What is it?"
 
-> **Tutor:** In one line each, what is each author *doing*—arguing, showing, complicating?
+> **Student:** "Maybe something about how Asian Americans are treated by society?"
+>
+> **Tutor:** "That's still a topic. Push to the specific question — the one where their answers might actually talk to each other or push back on each other."
 
-> **Student:** “Law = rules. Memoir = family experience. Data = outcomes.”
-
-> **Tutor:** What if the week’s pressure is how **formal rules** (law) meet **lived experience** and **measured patterns**? That’s a hypothesis. Where does the memoir show the law *land* in a life, and how does the data article name a *pattern* the law might shape?
-
-> **Tutor:** Find one short moment in each that touches “who belongs” or “what the state does.” If one doesn’t fit, we’ll name that mismatch explicitly—that’s still synthesis.
+> **Student:** "Maybe — how does the state shape which Asian Americans are visible and which are not?"
+>
+> **Tutor:** "That's a real question. Now — do these two readings give the same answer to it, or do they pull in different directions?"
